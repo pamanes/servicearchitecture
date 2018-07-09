@@ -1,5 +1,7 @@
 ﻿using Business;
 using PresentationBusiness;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Presentation
 {
@@ -18,6 +20,12 @@ namespace Presentation
         public void Save(ViewModelSaveDTO dto)
         {
             testService.Save(dto);
+        }
+
+        public IEnumerable<ViewModelDepartmentListDTO> GetAllActiveDepartments()
+        {
+            IEnumerable<ViewModelDepartmentListDTO> activeDepts = testService.GetAllActiveDepartments();
+            return activeDepts;
         }
     }
 }

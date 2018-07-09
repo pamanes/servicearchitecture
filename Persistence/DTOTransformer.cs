@@ -4,19 +4,19 @@ namespace Persistence
 {
     public class DTOTransformer
     {
-        public TestEntity ToEntity(TestDTO dto)
+        public TDepartment ToEntity(DepartmentDTO dto)
         {
-            TestEntity te = new TestEntity();
+            TDepartment te = new TDepartment();
             te.Sid = dto.Sid;
             te.Name = dto.Name;
             return te;
         }
 
-        public TestDTO ToDTO(TestEntity te)
+        public DepartmentDTO ToDTO(TDepartment te)
         {
-            TestDTO tdto = new TestDTO();
-            te.Sid = te.Sid;
-            te.Name = te.Name;
+            DepartmentDTO tdto = new DepartmentDTO();
+            tdto.Sid = te.Sid;
+            tdto.Name = te.Name;
             return tdto;
         }
     }

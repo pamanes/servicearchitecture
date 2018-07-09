@@ -1,8 +1,6 @@
-﻿using System;
+﻿using PresentationBusiness;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Presentation
 {
@@ -10,6 +8,14 @@ namespace Presentation
     {
         static void Main(string[] args)
         {
+            TestFacade tf = new TestFacade();
+            ViewModelSaveDTO saveDTO = new ViewModelSaveDTO();
+            saveDTO.Name = "Test";
+            tf.Save(saveDTO);
+
+            IEnumerable<ViewModelDepartmentListDTO> allActiveDepts = tf.GetAllActiveDepartments();
+            int x = allActiveDepts.Count();
+            
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace Persistence
+﻿namespace BusinessPersistence
 {
-    public class TestEntity
+    public class DepartmentDTO
     {
         public int Sid { get; set; }
         public string Name { get; set; }

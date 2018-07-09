@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ITestService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModelDepartmentListDTO.cs" />
     <Compile Include="ViewModelDTO.cs" />
     <Compile Include="ViewModelSaveDTO.cs" />
   </ItemGroup>

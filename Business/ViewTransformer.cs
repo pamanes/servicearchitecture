@@ -8,16 +8,23 @@ namespace Business
     /// </summary>
     public class ViewTransformer
     {
-        public ViewModelDTO toViewDTO(TestDTO dto)
+        public ViewModelDTO toViewDTO(DepartmentDTO dto)
         {
             ViewModelDTO vdto = new ViewModelDTO();
             vdto.Name = dto.Name;
             return vdto;
         }
 
-        public TestDTO toDTO(ViewModelSaveDTO save_dto)
+        public ViewModelDepartmentListDTO toListViewModelDTO(DepartmentDTO dto)
         {
-            TestDTO dto = new TestDTO();
+            ViewModelDepartmentListDTO vdto = new ViewModelDepartmentListDTO();
+            vdto.Name = dto.Name;
+            return vdto;
+        }
+
+        public DepartmentDTO toDTO(ViewModelSaveDTO save_dto)
+        {
+            DepartmentDTO dto = new DepartmentDTO();
             dto.Name = save_dto.Name;
             return dto;
         }
