@@ -5,4 +5,4 @@ This illustrates how to achieve separation of concerns in a service-oriented arc
 [[https://github.com/pamanes/servicearchitecture/blob/master/architecture_diagram.png|alt=octocat]]
 
 
-![My image](/master/architecture_diagram.png)
+![My image](/architecture_diagram.png)
