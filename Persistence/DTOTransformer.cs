@@ -1,4 +1,4 @@
-﻿using BusinessPersistence;
+﻿using PersistenceContracts;
 
 namespace Persistence
 {

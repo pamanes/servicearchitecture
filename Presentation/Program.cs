@@ -1,4 +1,4 @@
-﻿using PresentationBusiness;
+﻿using BusinessContracts;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,8 +8,8 @@ namespace Presentation
     {
         static void Main(string[] args)
         {
-            TestFacade tf = new TestFacade();
-            ViewModelSaveDTO saveDTO = new ViewModelSaveDTO();
+            Facade tf = new Facade();
+            ViewModelDepartmentSaveDTO saveDTO = new ViewModelDepartmentSaveDTO();
             saveDTO.Name = "Test";
             tf.Save(saveDTO);
 

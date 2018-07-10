@@ -1,4 +1,4 @@
-﻿using BusinessPersistence;
+﻿using PersistenceContracts;
 
 namespace PersistenceEF
 {
@@ -7,16 +7,16 @@ namespace PersistenceEF
         public tb_Department ToEntity(DepartmentDTO dto)
         {
             tb_Department te = new tb_Department();
-            te.DepartmentSid = dto.Sid;
-            te.DepartmentName = dto.Name;
+            te.Sid = dto.Sid;
+            te.Department = dto.Name;
             return te;
         }
 
         public DepartmentDTO ToDTO(tb_Department te)
         {
             DepartmentDTO tdto = new DepartmentDTO();
-            tdto.Sid = te.DepartmentSid;
-            tdto.Name = te.DepartmentName;
+            tdto.Sid = te.Sid.Value;
+            tdto.Name = te.Department;
             return tdto;
         }
     }

@@ -1,17 +1,17 @@
-﻿using BusinessPersistence;
-//using PersistenceEF;
-using Persistence;
-using PresentationBusiness;
+﻿using PersistenceContracts;
+using PersistenceEF;
+//using Persistence;
+using BusinessContracts;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Business
 {
-    public class TestServiceImpl : ITestService
+    public class DepartmentServiceImpl : IDepartmentService
     {
         ViewTransformer viewTransformer = new ViewTransformer();
         IDepartmentDAO dao;
-        public TestServiceImpl()
+        public DepartmentServiceImpl()
         {
             dao = new DepartmentDAOImpl();
         }
@@ -30,7 +30,7 @@ namespace Business
             IEnumerable<DepartmentDTO> listDTO = dao.GetAllActiveDepartments();
             return listDTO.Select(p => viewTransformer.toListViewModelDTO(p));
         }
-        public void Save(ViewModelSaveDTO dto)
+        public void Save(ViewModelDepartmentSaveDTO dto)
         {
             DepartmentDTO testdto = viewTransformer.toDTO(dto);
             dao.Save(testdto);

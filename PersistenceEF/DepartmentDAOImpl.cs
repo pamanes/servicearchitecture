@@ -1,4 +1,4 @@
-﻿using BusinessPersistence;
+﻿using PersistenceContracts;
 using System;
 using System.Linq;
 using System.Collections.Generic;
@@ -14,12 +14,7 @@ namespace PersistenceEF
             IEnumerable<tb_Department> list = GetList();
             using (MyDbContext context = new MyDbContext(@"MultipleActiveResultSets=True;Data Source=CORALEPAL1\SQL2014; Initial Catalog=Training;Connect Timeout=300;User Id=traininguser;Password=trainingpwd;Application Name=Training;"))
             {
-                IEnumerable<tb_Department> departments = (from d in context.MyDepartmentSet
-                                                          where d.Active == true
-                                                          select d).ToList();
-
-                int x = departments.Count();
-                te.DepartmentName += DateTime.Now.Ticks;
+                te.Department += DateTime.Now.Ticks;
                 context.MyDepartmentSet.Add(te);
                 context.SaveChanges();
                 //var stuff = context.Database.SqlQuery<Something>("select 1 as [one], 2 as [two] from dbo.tb_Department;");
@@ -39,13 +34,11 @@ namespace PersistenceEF
             }
             return departments;
         }
-
         public IEnumerable<DepartmentDTO> GetAllActiveDepartments()
         {
             IEnumerable<tb_Department> t_depts = GetList();
             return t_depts.Select(p => transformer.ToDTO(p));
         }
-
         public DepartmentDTO Get()
         {
             throw new NotImplementedException();

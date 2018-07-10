@@ -13,9 +13,9 @@ namespace PersistenceEF
     {
         [Key]
         [Column("Department_SID")]
-        public int DepartmentSid { get; set; }
+        public int? Sid { get; set; }
         [Column("Department")]
-        public string DepartmentName { get; set; }
+        public string Department { get; set; }
         [Column("Is_IT")]
         public bool IsIT { get; set; }
         public bool Active { get; set; }

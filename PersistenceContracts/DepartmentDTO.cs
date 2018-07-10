@@ -1,4 +1,4 @@
-﻿namespace BusinessPersistence
+﻿namespace PersistenceContracts
 {
     public class DepartmentDTO
     {

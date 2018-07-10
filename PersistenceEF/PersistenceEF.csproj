@@ -59,9 +59,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessPersistence\BusinessPersistence.csproj">
+    <ProjectReference Include="..\PersistenceContracts\PersistenceContracts.csproj">
       <Project>{2625f27e-0607-442c-ab1a-1b9b11889933}</Project>
-      <Name>BusinessPersistence</Name>
+      <Name>PersistenceContracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

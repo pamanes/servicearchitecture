@@ -41,21 +41,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestServiceImpl.cs" />
+    <Compile Include="DepartmentServiceImpl.cs" />
     <Compile Include="ViewTransformer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessPersistence\BusinessPersistence.csproj">
-      <Project>{2625f27e-0607-442c-ab1a-1b9b11889933}</Project>
-      <Name>BusinessPersistence</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Persistence\Persistence.csproj">
-      <Project>{3db8bb57-1c80-49a7-8afb-0b3e426e8bd2}</Project>
-      <Name>Persistence</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PresentationBusiness\PresentationBusiness.csproj">
+    <ProjectReference Include="..\BusinessContracts\BusinessContracts.csproj">
       <Project>{7742bc98-e8dc-4945-a483-dc80504a404e}</Project>
-      <Name>PresentationBusiness</Name>
+      <Name>BusinessContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersistenceContracts\PersistenceContracts.csproj">
+      <Project>{2625f27e-0607-442c-ab1a-1b9b11889933}</Project>
+      <Name>PersistenceContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersistenceEF\PersistenceEF.csproj">
+      <Project>{2e851e58-0984-4bb7-a20e-4a2f750e8262}</Project>
+      <Name>PersistenceEF</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

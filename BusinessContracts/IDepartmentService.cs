@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace PresentationBusiness
+namespace BusinessContracts
 {
-    public interface ITestService
+    public interface IDepartmentService
     {
-        void Save(ViewModelSaveDTO dto);
+        void Save(ViewModelDepartmentSaveDTO dto);
         ViewModelDTO Get();
         IEnumerable<ViewModelDepartmentListDTO> GetAllActiveDepartments();
     }

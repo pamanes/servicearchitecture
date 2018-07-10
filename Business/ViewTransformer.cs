@@ -1,5 +1,5 @@
-﻿using BusinessPersistence;
-using PresentationBusiness;
+﻿using PersistenceContracts;
+using BusinessContracts;
 
 namespace Business
 {
@@ -22,7 +22,7 @@ namespace Business
             return vdto;
         }
 
-        public DepartmentDTO toDTO(ViewModelSaveDTO save_dto)
+        public DepartmentDTO toDTO(ViewModelDepartmentSaveDTO save_dto)
         {
             DepartmentDTO dto = new DepartmentDTO();
             dto.Name = save_dto.Name;

@@ -1,23 +1,22 @@
 ﻿using Business;
-using PresentationBusiness;
-using System.Collections;
+using BusinessContracts;
 using System.Collections.Generic;
 
 namespace Presentation
 {
-    public class TestFacade
+    public class Facade
     {
-        readonly ITestService testService;
-        public TestFacade()
+        readonly IDepartmentService testService;
+        public Facade()
         {
-            testService = new TestServiceImpl();
+            testService = new DepartmentServiceImpl();
         }
         public ViewModelDTO Get()
         {
             ViewModelDTO vmdto = testService.Get();
             return vmdto;
         }
-        public void Save(ViewModelSaveDTO dto)
+        public void Save(ViewModelDepartmentSaveDTO dto)
         {
             testService.Save(dto);
         }

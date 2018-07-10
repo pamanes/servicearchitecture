@@ -54,9 +54,9 @@
       <Project>{46CFA8F9-3A93-46C8-A1F5-62DEEC3DE276}</Project>
       <Name>Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PresentationBusiness\PresentationBusiness.csproj">
+    <ProjectReference Include="..\BusinessContracts\BusinessContracts.csproj">
       <Project>{7742BC98-E8DC-4945-A483-DC80504A404E}</Project>
-      <Name>PresentationBusiness</Name>
+      <Name>BusinessContracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

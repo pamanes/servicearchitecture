@@ -1,4 +1,4 @@
-﻿namespace PresentationBusiness
+﻿namespace BusinessContracts
 {
     public class ViewModelDTO
     {
