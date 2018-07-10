@@ -1,4 +1,5 @@
 ﻿using BusinessContracts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,7 +11,7 @@ namespace Presentation
         {
             Facade tf = new Facade();
             VMDepartmentSave saveDTO = new VMDepartmentSave();
-            saveDTO.Name = "Test";
+            saveDTO.Name = "Test"+ DateTime.Now.Ticks;
             tf.Save(saveDTO);
 
             IEnumerable<VMDepartmentList> allActiveDepts = tf.GetAllActiveDepartments();

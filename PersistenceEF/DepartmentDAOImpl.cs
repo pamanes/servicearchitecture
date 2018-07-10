@@ -2,7 +2,8 @@
 using System;
 using System.Linq;
 using System.Collections.Generic;
-
+using System.Configuration;
+//var stuff = context.Database.SqlQuery<Something>("select 1 as [one], 2 as [two] from dbo.tb_Department;");
 namespace PersistenceEF
 {
     public class DepartmentDAOImpl : IDepartmentDAO
@@ -11,13 +12,11 @@ namespace PersistenceEF
         public void Save(DepartmentDTO dto)
         {
             tb_Department te = transformer.ToEntity(dto);
-            IEnumerable<tb_Department> list = GetList();
-            using (MyDbContext context = new MyDbContext(@"MultipleActiveResultSets=True;Data Source=CORALEPAL1\SQL2014; Initial Catalog=Training;Connect Timeout=300;User Id=traininguser;Password=trainingpwd;Application Name=Training;"))
-            {
-                te.Department += DateTime.Now.Ticks;
+            using (MyDbContext context = new MyDbContext())
+            {                
                 context.MyDepartmentSet.Add(te);
                 context.SaveChanges();
-                //var stuff = context.Database.SqlQuery<Something>("select 1 as [one], 2 as [two] from dbo.tb_Department;");
+                
             }
             Console.Out.WriteLine("save was called");
         }
@@ -25,7 +24,7 @@ namespace PersistenceEF
         IEnumerable<tb_Department> GetList()
         {
             IEnumerable<tb_Department> departments;
-            using (MyDbContext context = new MyDbContext(@"MultipleActiveResultSets=True;Data Source=CORALEPAL1\SQL2014; Initial Catalog=Training;Connect Timeout=300;User Id=traininguser;Password=trainingpwd;Application Name=Training;"))
+            using (MyDbContext context = new MyDbContext())
             {
                 departments = (from d in context.MyDepartmentSet
                                where d.Active == true

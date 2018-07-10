@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,13 @@ namespace PersistenceEF
     {
         public IDbSet<tb_Department> MyDepartmentSet { get; set; }
 
-        public MyDbContext(string connectionString) : base(connectionString)
+        //public MyDbContext() : base(ConfigurationManager.ConnectionStrings["DB"].ConnectionString)
+        public MyDbContext() : base("name=DB")
+        {
+            //this.Configuration.LazyLoadingEnabled = false;            
+        }
+
+        public MyDbContext(string connection_string) : base(connection_string)
         {
             //this.Configuration.LazyLoadingEnabled = false;
         }
