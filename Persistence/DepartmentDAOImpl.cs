@@ -10,17 +10,23 @@ namespace Persistence
         public void Save(DepartmentDTO dto)
         {
             TDepartment te = transformer.ToEntity(dto);
-            Console.Out.WriteLine("save was called");
+            Console.Out.WriteLine("Save was called");
         }
 
         public DepartmentDTO Get()
         {
+            Console.Out.WriteLine("Get was called");
             return new DepartmentDTO() { Name = "test", Sid = 10 } ;
         }
 
         public IEnumerable<DepartmentDTO> GetAllActiveDepartments()
         {
-            throw new NotImplementedException();
+            Console.Out.WriteLine("GetAllActiveDepartments was called");
+            return new List<DepartmentDTO>()
+            {
+                new DepartmentDTO(){ Name = "test1", Sid= 1 },
+                new DepartmentDTO(){ Name = "test2", Sid= 2 }
+            };
         }
     }
 }

@@ -42,9 +42,9 @@
   <ItemGroup>
     <Compile Include="IDepartmentService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModelDepartmentListDTO.cs" />
-    <Compile Include="ViewModelDTO.cs" />
-    <Compile Include="ViewModelSaveDTO.cs" />
+    <Compile Include="VMDepartmentList.cs" />
+    <Compile Include="VMDepartment.cs" />
+    <Compile Include="VMDepartmentSave.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,6 @@
 ﻿namespace BusinessContracts
 {
-    public class ViewModelDepartmentSaveDTO
+    public class VMDepartmentSave
     {
         public string Name { get; set; }
     }

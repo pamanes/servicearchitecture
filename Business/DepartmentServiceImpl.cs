@@ -15,22 +15,22 @@ namespace Business
         {
             dao = new DepartmentDAOImpl();
         }
-        public ViewModelDTO Get()
+        public VMDepartment Get()
         {
-            return new ViewModelDTO() { Name = "test" };
+            return new VMDepartment() { Name = "test" };
         }
-        public ViewModelDTO GetData()
+        public VMDepartment GetData()
         {
             DepartmentDTO dto = dao.Get();
             return viewTransformer.toViewDTO(dto);
         }
 
-        public IEnumerable<ViewModelDepartmentListDTO> GetAllActiveDepartments()
+        public IEnumerable<VMDepartmentList> GetAllActiveDepartments()
         {
             IEnumerable<DepartmentDTO> listDTO = dao.GetAllActiveDepartments();
             return listDTO.Select(p => viewTransformer.toListViewModelDTO(p));
         }
-        public void Save(ViewModelDepartmentSaveDTO dto)
+        public void Save(VMDepartmentSave dto)
         {
             DepartmentDTO testdto = viewTransformer.toDTO(dto);
             dao.Save(testdto);

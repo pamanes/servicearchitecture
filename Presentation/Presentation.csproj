@@ -50,13 +50,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Business\Business.csproj">
-      <Project>{46CFA8F9-3A93-46C8-A1F5-62DEEC3DE276}</Project>
-      <Name>Business</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BusinessContracts\BusinessContracts.csproj">
-      <Project>{7742BC98-E8DC-4945-A483-DC80504A404E}</Project>
+      <Project>{7742bc98-e8dc-4945-a483-dc80504a404e}</Project>
       <Name>BusinessContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{46cfa8f9-3a93-46c8-a1f5-62deec3de276}</Project>
+      <Name>Business</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

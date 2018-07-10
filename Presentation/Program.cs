@@ -9,13 +9,12 @@ namespace Presentation
         static void Main(string[] args)
         {
             Facade tf = new Facade();
-            ViewModelDepartmentSaveDTO saveDTO = new ViewModelDepartmentSaveDTO();
+            VMDepartmentSave saveDTO = new VMDepartmentSave();
             saveDTO.Name = "Test";
             tf.Save(saveDTO);
 
-            IEnumerable<ViewModelDepartmentListDTO> allActiveDepts = tf.GetAllActiveDepartments();
-            int x = allActiveDepts.Count();
-            
+            IEnumerable<VMDepartmentList> allActiveDepts = tf.GetAllActiveDepartments();
+            int x = allActiveDepts.Count();            
         }
     }
 }

@@ -11,19 +11,19 @@ namespace Presentation
         {
             testService = new DepartmentServiceImpl();
         }
-        public ViewModelDTO Get()
+        public VMDepartment Get()
         {
-            ViewModelDTO vmdto = testService.Get();
+            VMDepartment vmdto = testService.Get();
             return vmdto;
         }
-        public void Save(ViewModelDepartmentSaveDTO dto)
+        public void Save(VMDepartmentSave dto)
         {
             testService.Save(dto);
         }
 
-        public IEnumerable<ViewModelDepartmentListDTO> GetAllActiveDepartments()
+        public IEnumerable<VMDepartmentList> GetAllActiveDepartments()
         {
-            IEnumerable<ViewModelDepartmentListDTO> activeDepts = testService.GetAllActiveDepartments();
+            IEnumerable<VMDepartmentList> activeDepts = testService.GetAllActiveDepartments();
             return activeDepts;
         }
     }
