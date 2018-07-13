@@ -11,6 +11,7 @@ namespace PersistenceEF
     public class MyDbContext : DbContext
     {
         public IDbSet<tb_Department> MyDepartmentSet { get; set; }
+        public IDbSet<tb_Department_Comment> MyCommentSet { get; set; }
 
         //public MyDbContext() : base(ConfigurationManager.ConnectionStrings["DB"].ConnectionString)
         public MyDbContext() : base("name=DB")
